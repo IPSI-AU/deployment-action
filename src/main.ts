@@ -93,9 +93,10 @@ async function run(): Promise<void> {
       payload: payload ? tryParseJSON(payload) : undefined,
       description
     })
-
+    
+    // TODO: Look into logging stuff to the console
     // core.error(error)
-    core.setFailed(`Print Deployment Data: ${deployment.data}`)
+    // core.setFailed(`Print Deployment Data: ${deployment.data}`)
     // core.error('deployment.data', deployment.data)
 
     if (!('id' in deployment.data)) {
