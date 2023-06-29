@@ -93,7 +93,7 @@ async function run(): Promise<void> {
       payload: payload ? tryParseJSON(payload) : undefined,
       description
     })
-    
+
     // TODO: Look into logging stuff to the console
     // core.error(error)
     // core.setFailed(`Print Deployment Data: ${deployment.data}`)
