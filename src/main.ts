@@ -93,10 +93,14 @@ async function run(): Promise<void> {
       payload: payload ? tryParseJSON(payload) : undefined,
       description
     })
-
+    
+    core.setOutput('deployment.data', deployment.data)
+    
     if (!('id' in deployment.data)) {
       // TODO: Should 202 be handled differently? Either way we get no ID
       throw new Error(deployment.data.message)
+      
+      
     }
 
     await octokit.rest.repos.createDeploymentStatus({
