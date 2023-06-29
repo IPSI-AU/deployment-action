@@ -94,6 +94,11 @@ async function run(): Promise<void> {
       description
     })
 
+    // TODO: Look into logging stuff to the console
+    // core.error(error)
+    // core.setFailed(`Print Deployment Data: ${deployment.data}`)
+    // core.error('deployment.data', deployment.data)
+
     if (!('id' in deployment.data)) {
       // TODO: Should 202 be handled differently? Either way we get no ID
       throw new Error(deployment.data.message)
