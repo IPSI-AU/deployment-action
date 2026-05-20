@@ -4,13 +4,13 @@ on:
   push:
     branches:
       - master
-      - release/*
-      - security/*
+      - release/**
+      - security/**
   pull_request:
     branches:
       - master
-      - release/*
-      - security/*
+      - release/**
+      - security/**
 
 permissions:
   id-token: write
