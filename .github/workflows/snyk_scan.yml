@@ -1,0 +1,21 @@
+name: Snyk Security Scan
+
+on:
+  push:
+    branches:
+      - master
+      - release/**
+      - security/**
+  pull_request:
+    branches:
+      - master
+      - release/**
+      - security/**
+
+permissions:
+  contents: read
+
+jobs:
+  snyk:
+    uses: IPSI-AU/es-devops/.github/workflows/snyk-reusable.yml@master
+    secrets: inherit
