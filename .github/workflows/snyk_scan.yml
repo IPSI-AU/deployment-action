@@ -2,9 +2,13 @@ name: Snyk Security Scan
 
 on:
   push:
-    branches: [master]
+    branches:
+      - master
+      - release/*
   pull_request:
-    branches: [master]
+    branches:
+      - master
+      - release/*
 
 permissions:
   id-token: write
