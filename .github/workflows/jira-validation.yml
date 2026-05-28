@@ -4,4 +4,4 @@ on:
     types: [opened, edited, reopened, synchronize]
 jobs:
   jira-validation:
-    uses: IPSI-AU/es-devops/.github/workflows/jira-validation-reusesable.yml@master
+    uses: IPSI-AU/es-devops/.github/workflows/jira-validation-reusable.yml@master
