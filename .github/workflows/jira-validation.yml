@@ -1,0 +1,7 @@
+name: JIRA Ticket Validation
+on:
+  pull_request:
+    types: [opened, edited, reopened, synchronize]
+jobs:
+  jira-validation:
+    uses: IPSI-AU/es-devops/.github/workflows/jira-validation-reusesable.yml@master
