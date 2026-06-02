@@ -2,6 +2,21 @@ name: JIRA Ticket Validation
 on:
   pull_request:
     types: [opened, edited, reopened, synchronize]
+permissions:
+  pull-requests: read
+  contents: read
 jobs:
   jira-validation:
+    name: Jira Validation
     uses: IPSI-AU/es-devops/.github/workflows/jira-validation-reusable.yml@master
+  validate-jira-ticket:
+    name: JIRA Validation Status
+    needs: jira-validation
+    runs-on: default
+    if: always()
+    steps:
+      - name: Check result
+        run: |
+          if [ "${{ needs.jira-validation.result }}" != "success" ]; then
+            exit 1
+          fi
