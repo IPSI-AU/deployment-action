@@ -8,11 +8,10 @@
 
 ### Test Evidence
 <!-- Describe and provide evidence this was tested -->
+- [ ] Test performed
 - [ ] Link of last successful runner from branch
-- [ ] Unit tests added/updated
-- [ ] Manual testing performed
 
 ### Checklist
-- [ ] PR title includes Jira ticket in the latest commit with format (e.g. `fix: JIRA-123: Description`)
+- [ ] PR title includes Jira ticket with format (e.g. `fix: JIRA-123: Description`)
 - [ ] Jira ticket linked above
 - [ ] Code reviewed for security concerns
